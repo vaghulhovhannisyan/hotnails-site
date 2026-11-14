@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f0e9">
+  <meta name="description" content="Hot Nails — корейский маникюр и авторский nail-art в центре Москвы. Запись онлайн.">
+  <title>Hot Nails — корейский маникюр в Москве</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root{--paper:#f5f0e9;--ink:#171615;--muted:#77716c;--line:#d9d1c8;--pink:#f0b6bd;--red:#e64e46;--white:#fffdfa}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Manrope,Arial,sans-serif}
+    a{color:inherit;text-decoration:none}button{font:inherit}.wrap{width:min(1240px,calc(100% - 56px));margin:auto}
+    .topline{border-bottom:1px solid var(--line);font-size:11px;letter-spacing:.16em;text-transform:uppercase;padding:13px 0;color:var(--muted)}
+    .topline .wrap{display:flex;justify-content:space-between;gap:20px}
+    header{display:flex;align-items:center;justify-content:space-between;padding:25px 0;border-bottom:1px solid var(--line)}
+    .logo{font-size:25px;font-weight:800;letter-spacing:-.08em}.logo span{color:var(--red)}
+    nav{display:flex;gap:32px;font-size:12px;text-transform:uppercase;letter-spacing:.1em}
+    .nav-cta{border:1px solid var(--ink);padding:12px 18px;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+    .hero{padding:74px 0 78px;display:grid;grid-template-columns:1fr .83fr;gap:7%;align-items:center}
+    .eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);display:flex;align-items:center;gap:12px}
+    .eyebrow:before{content:"";width:28px;height:1px;background:var(--red)}
+    h1{font-size:clamp(58px,8vw,112px);line-height:.91;letter-spacing:-.085em;margin:26px 0 25px;font-weight:700}
+    h1 em{font-family:"Playfair Display",serif;font-weight:500;letter-spacing:-.07em}
+    .hero-copy{max-width:440px;color:#5f5954;font-size:15px;line-height:1.8}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:16px 23px;background:var(--ink);color:white;font-size:11px;letter-spacing:.13em;text-transform:uppercase;transition:.2s}
+    .btn:hover{background:var(--red)}.btn.outline{background:transparent;color:var(--ink);border:1px solid var(--ink)}
+    .hero-photo{position:relative;max-width:490px;margin-left:auto}
+    .hero-photo img{width:100%;display:block;aspect-ratio:4/5;object-fit:cover}
+    .stamp{position:absolute;left:-35px;bottom:32px;background:var(--pink);width:112px;height:112px;border-radius:50%;display:grid;place-items:center;text-align:center;font-size:10px;line-height:1.4;letter-spacing:.1em;text-transform:uppercase;transform:rotate(-12deg);border:1px solid #d99099}
+    .vertical-note{position:absolute;right:-35px;top:20px;writing-mode:vertical-rl;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+    .ticker{background:var(--ink);color:var(--paper);overflow:hidden;padding:17px 0;white-space:nowrap;font-size:12px;letter-spacing:.19em;text-transform:uppercase}
+    .ticker span{padding:0 25px}.ticker b{color:var(--pink);font-weight:500}
+    section{padding:92px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:35px}
+    .kicker{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
+    h2{font-size:clamp(40px,5vw,67px);line-height:1;letter-spacing:-.07em;margin:14px 0 0}
+    h2 em{font-family:"Playfair Display",serif;font-weight:500}
+    .section-desc{max-width:320px;color:var(--muted);font-size:13px;line-height:1.8}
+    .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:14px}
+    .shot{border:0;padding:0;background:#ddd;cursor:zoom-in;overflow:hidden;position:relative}
+    .shot:nth-child(1){grid-column:span 5}.shot:nth-child(2){grid-column:span 3}.shot:nth-child(3){grid-column:span 4}
+    .shot:nth-child(4){grid-column:span 4}.shot:nth-child(5){grid-column:span 4}.shot:nth-child(6){grid-column:span 4}
+    .shot img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .5s}
+    .shot:nth-child(-n+3){height:410px}.shot:nth-child(n+4){height:350px}
+    .shot:hover img{transform:scale(1.04)}
+    .manifesto{background:#e8ddd4;position:relative;overflow:hidden}
+    .manifesto .wrap{display:grid;grid-template-columns:1fr 1fr;gap:10%;align-items:center}
+    .manifesto h2{font-size:clamp(42px,6vw,76px)}.manifesto p{font-size:15px;line-height:1.9;color:#655d57;max-width:440px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:42px}
+    .service{padding:28px 25px 30px 0;border-right:1px solid var(--line)}.service+ .service{padding-left:25px}
+    .service:last-child{border:0}.service small{font-size:10px;letter-spacing:.16em;color:var(--red)}
+    .service h3{font-size:19px;margin:13px 0 8px;letter-spacing:-.04em}.service p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}
+    .locations{background:#1b1a19;color:var(--paper)}
+    .locations .kicker,.locations .section-desc{color:#aaa29b}
+    .location-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:38px}
+    .location{border:1px solid #4b4642;padding:30px;min-height:220px;display:flex;flex-direction:column;justify-content:space-between}
+    .location .number{font-family:"Playfair Display",serif;font-size:35px;color:var(--pink)}
+    .location h3{font-size:23px;margin:12px 0 7px}.location p{color:#bdb5ad;font-size:13px;line-height:1.7;margin:0}
+    .location a{font-size:11px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid #8c8179;align-self:flex-start;padding-bottom:6px;margin-top:22px}
+    .contact{display:grid;grid-template-columns:1fr auto;gap:35px;align-items:center}
+    .contact h2{max-width:700px}.contact .social{font-size:13px;line-height:2;color:var(--muted);margin-top:20px}
+    footer{border-top:1px solid var(--line);padding:24px 0;font-size:10px;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+    footer .wrap{display:flex;justify-content:space-between;gap:20px}
+    .lightbox{position:fixed;inset:0;background:#100f0fee;display:none;align-items:center;justify-content:center;padding:24px;z-index:20}
+    .lightbox.open{display:flex}.lightbox img{max-width:min(90vw,850px);max-height:88vh;object-fit:contain}
+    .close{position:absolute;right:25px;top:20px;color:white;background:none;border:0;font-size:34px;cursor:pointer}
+    @media(max-width:760px){.wrap{width:min(100% - 36px,600px)}.topline .wrap{font-size:9px}header{padding:18px 0}nav{display:none}.logo{font-size:23px}.nav-cta{padding:10px 12px;font-size:9px}
+      .hero{padding:48px 0 55px;grid-template-columns:1fr;gap:38px}.hero-photo{width:82%;margin:0 auto}.stamp{width:88px;height:88px;left:-24px;font-size:8px}.vertical-note{right:-23px}
+      section{padding:65px 0}.section-head{display:block}.section-desc{margin-top:20px}.gallery{gap:8px}.shot:nth-child(1){grid-column:span 7}.shot:nth-child(2){grid-column:span 5}.shot:nth-child(3){grid-column:span 5}.shot:nth-child(4){grid-column:span 7}.shot:nth-child(5){grid-column:span 6}.shot:nth-child(6){grid-column:span 6}
+      .shot:nth-child(-n+3){height:260px}.shot:nth-child(n+4){height:230px}.manifesto .wrap{grid-template-columns:1fr;gap:18px}
+      .services{grid-template-columns:1fr}.service,.service+.service{padding:22px 0;border-right:0;border-bottom:1px solid var(--line)}.service:last-child{border-bottom:0}
+      .location-grid{grid-template-columns:1fr}.location{min-height:190px;padding:24px}.contact{grid-template-columns:1fr}.contact .btn{justify-self:start}footer .wrap{display:block}footer .wrap span{display:block;margin:7px 0}
+    }
+  </style>
+</head>
+<body>
+  <div class="topline"><div class="wrap"><span>Корейский nail-art · Москва</span><span>Марксистская / Бауманская</span></div></div>
+  <div class="wrap">
+    <header>
+      <a class="logo" href="#">hotnails<span>*</span></a>
+      <nav><a href="#works">Работы</a><a href="#about">О студии</a><a href="#locations">Адреса</a></nav>
+      <a class="nav-cta" href="https://dikidi.net/g349170" target="_blank" rel="noopener">Записаться ↗</a>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <div class="eyebrow">Nail studio · Moscow</div>
+          <h1>Ногти,<br><em>которые</em><br>говорят.</h1>
+          <p class="hero-copy">Самые крутые корейские ноготочки в центре Москвы. Смелые сочетания, сложные детали и дизайн, который хочется рассматривать.</p>
+          <div class="actions">
+            <a class="btn" href="https://dikidi.net/g349170" target="_blank" rel="noopener">Выбрать время ↗</a>
+            <a class="btn outline" href="#works">Смотреть работы</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/nail-art-06.jpg" alt="Авторский объёмный дизайн ногтей Hot Nails">
+          <div class="stamp">made with<br>love & detail<br>✳ hot nails</div>
+          <div class="vertical-note">Your nails · your mood · your art</div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div class="ticker"><span>HOT NAILS <b>✳</b> KOREAN NAIL ART <b>✳</b> MOSCOW <b>✳</b> HOT NAILS <b>✳</b> KOREAN NAIL ART <b>✳</b> MOSCOW <b>✳</b></span></div>
+  <div class="wrap">
+    <section id="works">
+      <div class="section-head">
+        <div><div class="kicker">01 / Portfolio</div><h2>Свои правила.<br><em>Свой дизайн.</em></h2></div>
+        <p class="section-desc">От деликатного сияния до объёмных арт-деталей. Листай подборку работ студии — каждая пара ногтей со своим характером.</p>
+      </div>
+      <div class="gallery">
+        <button class="shot" aria-label="Открыть фото 1"><img src="assets/nail-art-01.jpg" alt="Маникюр с голубыми и серебряными деталями"></button>
+        <button class="shot" aria-label="Открыть фото 2"><img src="assets/nail-art-02.jpg" alt="Красный авторский маникюр с металлическим декором"></button>
+        <button class="shot" aria-label="Открыть фото 3"><img src="assets/nail-art-03.jpg" alt="Маникюр с хэллоуин-дизайном"></button>
+        <button class="shot" aria-label="Открыть фото 4"><img src="assets/nail-art-04.jpg" alt="Яркий объёмный nail-art"></button>
+        <button class="shot" aria-label="Открыть фото 5"><img src="assets/nail-art-05.jpg" alt="Розовый и голубой градиентный маникюр"></button>
+        <button class="shot" aria-label="Открыть фото 6"><img src="assets/nail-art-06.jpg" alt="Длинные ногти с серебряным объёмным дизайном"></button>
+      </div>
+    </section>
+  </div>
+  <section class="manifesto" id="about">
+    <div class="wrap">
+      <div><div class="kicker">02 / About us</div><h2>Не просто<br><em>маникюр.</em><br>Настроение.</h2></div>
+      <div><p>Hot Nails — пространство для тех, кто любит экспериментировать и выражать себя через детали. Вдохновляемся корейской эстетикой, работаем с цветом, фактурой и объёмом.</p><p>Покажи мастеру идею или собери свой дизайн вместе с нами.</p></div>
+    </div>
+  </section>
+  <div class="wrap">
+    <section>
+      <div class="kicker">03 / What we do</div><h2>Твой следующий<br><em>любимый дизайн.</em></h2>
+      <div class="services">
+        <div class="service"><small>01 — MANICURE</small><h3>Маникюр</h3><p>Аккуратная обработка и покрытие с вниманием к каждой детали.</p></div>
+        <div class="service"><small>02 — NAIL ART</small><h3>Авторский дизайн</h3><p>Рисунки, фактуры, объёмные элементы и необычные сочетания.</p></div>
+        <div class="service"><small>03 — EXTENSION</small><h3>Наращивание</h3><p>Форма и длина, которые становятся основой твоего образа.</p></div>
+      </div>
+    </section>
+  </div>
+  <section class="locations" id="locations">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="kicker">04 / Find us</div><h2>Две точки.<br><em>Одна любовь.</em></h2></div>
+        <p class="section-desc">Выбирай удобную студию и бронируй время онлайн. А если нужна помощь — напиши нам в Telegram.</p>
+      </div>
+      <div class="location-grid">
+        <article class="location"><div><div class="number">01</div><h3>Марксистская</h3><p>м. Марксистская<br>ул. Марксистская, 20с10</p></div><a href="https://yandex.com/maps/?text=Москва%20улица%20Марксистская%2020с10" target="_blank" rel="noopener">Открыть на карте ↗</a></article>
+        <article class="location"><div><div class="number">02</div><h3>Бауманская</h3><p>м. Бауманская<br>ул. Фридриха Энгельса, 23с4</p></div><a href="https://yandex.com/maps/?text=Москва%20улица%20Фридриха%20Энгельса%2023с4" target="_blank" rel="noopener">Открыть на карте ↗</a></article>
+      </div>
+    </div>
+  </section>
+  <div class="wrap">
+    <section class="contact">
+      <div><div class="kicker">05 / Make an appointment</div><h2>Готова к ногтям,<br><em>которые заметят?</em></h2>
+        <div class="social">Запись онлайн — в любое время.<br>Для связи: <a href="https://t.me/hotnailsmoscow" target="_blank" rel="noopener">@hotnailsmoscow</a></div>
+      </div>
+      <a class="btn" href="https://dikidi.net/g349170" target="_blank" rel="noopener">Записаться онлайн ↗</a>
+    </section>
+  </div>
+  <footer><div class="wrap"><span>© Hot Nails · Moscow</span><span>Корейский nail-art · Марксистская / Бауманская</span><a href="https://t.me/hotnailsmsc" target="_blank" rel="noopener">Telegram ↗</a></div></footer>
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фотографии"><button class="close" aria-label="Закрыть">×</button><img src="" alt=""></div>
+  <script>
+    const box=document.getElementById('lightbox'), big=box.querySelector('img');
+    document.querySelectorAll('.shot').forEach(b=>b.addEventListener('click',()=>{big.src=b.querySelector('img').src;big.alt=b.querySelector('img').alt;box.classList.add('open')}));
+    box.addEventListener('click',e=>{if(e.target===box||e.target.classList.contains('close'))box.classList.remove('open')});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')box.classList.remove('open')});
+  </script>
+</body>
+</html>
